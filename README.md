@@ -5,6 +5,10 @@ InkLook is a small native macOS Quick Look preview extension for Markdown files.
 The containing app is intentionally headless. It has no user-facing window, no Dock icon, and
 exists only because Apple distributes Quick Look preview extensions inside a containing app.
 
+This project defaults to the non-paid distribution path: publish a locally built `.app` bundle,
+re-sign it ad hoc for honesty, and let the Homebrew cask remove quarantine and register the
+extension on install.
+
 ## Goals
 
 - No embedded web view
@@ -61,21 +65,20 @@ xcodebuild \
 
 ## Local Install
 
-For actual Finder integration you still need to sign the app and extension in Xcode.
-
 Typical local flow:
 
-1. Open `InkLook.xcodeproj` in Xcode.
-2. Set your signing team for the app and extension.
-3. Build `InkLook`.
-4. Copy `InkLook.app` into `/Applications`.
-5. Run `scripts/register-quicklook.sh /Applications/InkLook.app`.
-6. If Finder still shows an old preview, run `qlmanage -r`, `killall Finder`, and `killall QuickLookUIService`.
+1. Open `InkLook.xcodeproj` in Xcode and build `InkLook`, or use the command-line build above.
+2. Copy the built `InkLook.app` into `/Applications`.
+3. Run `scripts/register-quicklook.sh /Applications/InkLook.app`.
+4. If Finder still shows an old preview, run `qlmanage -r`, `killall Finder`, and `killall QuickLookUIService`.
+
+You do not need a paid Apple Developer account for this local flow. Local builds typically avoid
+Gatekeeper friction because they never pass through a quarantined download.
 
 ## Homebrew Distribution
 
-InkLook is set up to ship as a Homebrew cask rather than a formula, because the product is a
-signed `.app` bundle with an embedded Quick Look extension.
+InkLook ships as a Homebrew cask rather than a formula because the product is an `.app` bundle
+with an embedded Quick Look extension.
 
 Install from the tap:
 
@@ -87,17 +90,26 @@ The template cask lives at `packaging/homebrew/inklook.rb`.
 
 Release flow:
 
-1. Build and archive a signed `InkLook.app`.
-2. Notarize it with Developer ID signing.
-3. Zip the notarized app with `scripts/package-release.sh /path/to/InkLook.app <version>`.
-4. Upload `InkLook.zip` to a GitHub release.
-5. Copy the reported SHA256 and version into `packaging/homebrew/inklook.rb`.
-6. Publish that cask in your tap.
+1. Build `InkLook.app` locally.
+2. Run `scripts/package-release.sh /path/to/InkLook.app <version>`.
+3. Upload the generated `InkLook.zip` to a GitHub release.
+4. Copy the reported SHA256 and version into `packaging/homebrew/inklook.rb`.
+5. Publish that cask in your tap.
 
-The cask currently removes quarantine in `postflight` before running `pluginkit` and `qlmanage`.
-That is the one-command, no-UI path. If you want a stricter trust model, remove the `xattr` line,
-but users will need to manually open and approve the containing app before macOS enables the
-extension.
+`scripts/package-release.sh` copies the app to a staging directory and re-signs it ad hoc before
+zipping. That matters because the default distribution path here is not the Apple Developer ID
+path, so the release artifact should not carry a misleading local-development signature.
+
+The cask removes quarantine in `postflight` before running `pluginkit` and `qlmanage`. That is the
+actual plug-and-play path for unpaid distribution. Without that `xattr` step, users may need to
+manually open and approve the containing app before macOS enables the extension.
+
+This is a deliberate tradeoff:
+
+- Pro: no Apple Developer subscription required
+- Pro: one-command Homebrew install still works
+- Con: Gatekeeper is not giving users the normal notarized Developer ID assurance
+- Con: future macOS releases could make quarantine-stripping installs less reliable
 
 ## Security Notes
 
@@ -105,3 +117,5 @@ extension.
 - The containing app is sandboxed and has no file access entitlement because it no longer exposes a UI.
 - Links are rendered as text styles, but the shared preview text view suppresses link-click navigation.
 - InkLook intentionally does not try to render Mermaid, HTML, or remote images.
+- The default release process produces an ad hoc-signed app and relies on the Homebrew cask to
+  clear quarantine and register the extension.
