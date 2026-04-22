@@ -1,6 +1,6 @@
 # InkLook
 
-InkLook is a small native macOS Quick Look preview extension for Markdown files.
+TLDR, this is a tool to properly render markdown on macOS when pressing Space on Finder (previewing files with QuickLook)
 
 The containing app is intentionally headless. It has no user-facing window, no Dock icon, and
 exists only because Apple distributes Quick Look preview extensions inside a containing app.
@@ -17,6 +17,42 @@ extension on install.
 - No auto-update framework
 - Native Markdown parsing via Apple's Foundation APIs
 - Plug-and-play Homebrew distribution
+
+## Homebrew Distribution
+
+InkLook ships as a Homebrew cask rather than a formula because the product is an `.app` bundle
+with an embedded Quick Look extension.
+
+Install from the tap:
+
+```bash
+brew install --cask ReyNeill/tap/inklook
+```
+
+The template cask lives at `packaging/homebrew/inklook.rb`.
+
+Release flow:
+
+1. Build `InkLook.app` locally.
+2. Run `scripts/package-release.sh /path/to/InkLook.app <version>`.
+3. Upload the generated `InkLook.zip` to a GitHub release.
+4. Copy the reported SHA256 and version into `packaging/homebrew/inklook.rb`.
+5. Publish that cask in your tap.
+
+`scripts/package-release.sh` copies the app to a staging directory and re-signs it ad hoc before
+zipping. That matters because the default distribution path here is not the Apple Developer ID
+path, so the release artifact should not carry a misleading local-development signature.
+
+The cask removes quarantine in `postflight` before running `pluginkit` and `qlmanage`. That is the
+actual plug-and-play path for unpaid distribution. Without that `xattr` step, users may need to
+manually open and approve the containing app before macOS enables the extension.
+
+This is a deliberate tradeoff:
+
+- Pro: no Apple Developer subscription required
+- Pro: one-command Homebrew install still works
+- Con: Gatekeeper is not giving users the normal notarized Developer ID assurance
+- Con: future macOS releases could make quarantine-stripping installs less reliable
 
 ## What It Supports
 
@@ -74,42 +110,6 @@ Typical local flow:
 
 You do not need a paid Apple Developer account for this local flow. Local builds typically avoid
 Gatekeeper friction because they never pass through a quarantined download.
-
-## Homebrew Distribution
-
-InkLook ships as a Homebrew cask rather than a formula because the product is an `.app` bundle
-with an embedded Quick Look extension.
-
-Install from the tap:
-
-```bash
-brew install --cask ReyNeill/tap/inklook
-```
-
-The template cask lives at `packaging/homebrew/inklook.rb`.
-
-Release flow:
-
-1. Build `InkLook.app` locally.
-2. Run `scripts/package-release.sh /path/to/InkLook.app <version>`.
-3. Upload the generated `InkLook.zip` to a GitHub release.
-4. Copy the reported SHA256 and version into `packaging/homebrew/inklook.rb`.
-5. Publish that cask in your tap.
-
-`scripts/package-release.sh` copies the app to a staging directory and re-signs it ad hoc before
-zipping. That matters because the default distribution path here is not the Apple Developer ID
-path, so the release artifact should not carry a misleading local-development signature.
-
-The cask removes quarantine in `postflight` before running `pluginkit` and `qlmanage`. That is the
-actual plug-and-play path for unpaid distribution. Without that `xattr` step, users may need to
-manually open and approve the containing app before macOS enables the extension.
-
-This is a deliberate tradeoff:
-
-- Pro: no Apple Developer subscription required
-- Pro: one-command Homebrew install still works
-- Con: Gatekeeper is not giving users the normal notarized Developer ID assurance
-- Con: future macOS releases could make quarantine-stripping installs less reliable
 
 ## Security Notes
 
