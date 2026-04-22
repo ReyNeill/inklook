@@ -1,6 +1,6 @@
 cask "inklook" do
-  version "0.1.1"
-  sha256 "d9f58474ffa2b675490c7ff1cc087a1217bc552f5b94cf76b8f4062544c39814"
+  version "0.1.2"
+  sha256 "29d10e7d225d05e4b73adb8a624afcfcefc41a14e0c1fa36a535d5023f91f6b9"
 
   url "https://github.com/ReyNeill/inklook/releases/download/v#{version}/InkLook.zip"
   name "InkLook"
