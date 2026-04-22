@@ -1,0 +1,579 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 63;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		03F1B6A6890EB88B1760F063 /* MarkdownTextLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341F7D0516B7C0722BA0270C /* MarkdownTextLoader.swift */; };
+		267F99A8CFBF5FCF156369B5 /* InkLookPreview.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = F791B41033B70B1A11CB0448 /* InkLookPreview.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		2D14DA74522FCC98596A4084 /* MarkdownTextLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341F7D0516B7C0722BA0270C /* MarkdownTextLoader.swift */; };
+		37594CDF4A6D6DAE7D6B157C /* PreviewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59356CADB25DAC17DE9F5925 /* PreviewStyle.swift */; };
+		51F405BA37938B006B3E0486 /* PreviewTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EDE80E974D846E26E6DFC74 /* PreviewTextView.swift */; };
+		72204F9DBC9512643B1081E0 /* PreviewTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EDE80E974D846E26E6DFC74 /* PreviewTextView.swift */; };
+		7E0EC00D29EC188AF8517487 /* MarkdownRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 763D600632A71F40F2F7815D /* MarkdownRenderer.swift */; };
+		865B2C6709E5D43800630F7F /* PreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97D8339BE4382DB9A61D265A /* PreviewViewController.swift */; };
+		BBCB0C2D302D816AC1814A9C /* MarkdownTextLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 341F7D0516B7C0722BA0270C /* MarkdownTextLoader.swift */; };
+		C441CFAF07F911F496FD70FE /* MarkdownTextLoaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B696D41C92ECE47C93AB8C75 /* MarkdownTextLoaderTests.swift */; };
+		D3A5359C973E3C7FD0D0B72C /* MarkdownRendererTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E3F9CF41ADBC92F1D8B4A5 /* MarkdownRendererTests.swift */; };
+		D5479CD47F91E38FD7931049 /* PreviewTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EDE80E974D846E26E6DFC74 /* PreviewTextView.swift */; };
+		D5F74131777B0806BB57A1DC /* PreviewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59356CADB25DAC17DE9F5925 /* PreviewStyle.swift */; };
+		DE01428924D029469353556F /* MarkdownRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 763D600632A71F40F2F7815D /* MarkdownRenderer.swift */; };
+		E3AF3CD9C92F8954E6D7359F /* MarkdownRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 763D600632A71F40F2F7815D /* MarkdownRenderer.swift */; };
+		E6C3B0786B9B378777BABB42 /* QuickLookUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E35948C34008E6A55266C7FF /* QuickLookUI.framework */; };
+		FC5728F061C89A862B5C027D /* PreviewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59356CADB25DAC17DE9F5925 /* PreviewStyle.swift */; };
+		FFBB577A83E50433272D8461 /* InkLookApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97912C99714ADABDC8CD57D7 /* InkLookApp.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D5EE93AD761C6CF2C7CB9259 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6793D5CAF21659C6F75AED46 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 592151513CB42F8FC49FEE0C;
+			remoteInfo = InkLookPreview;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		0D9D0B429C8D130C197E35B4 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				267F99A8CFBF5FCF156369B5 /* InkLookPreview.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		03A93D07323272ECD356B471 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		2200416FC528D1261CF071F2 /* InkLook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InkLook.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		341F7D0516B7C0722BA0270C /* MarkdownTextLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkdownTextLoader.swift; sourceTree = "<group>"; };
+		3EDE80E974D846E26E6DFC74 /* PreviewTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewTextView.swift; sourceTree = "<group>"; };
+		4476A86835B083184DAFDDA2 /* InkLookTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InkLookTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C1D382BB3D7959738F271AD /* InkLook.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = InkLook.entitlements; sourceTree = "<group>"; };
+		54E3F9CF41ADBC92F1D8B4A5 /* MarkdownRendererTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkdownRendererTests.swift; sourceTree = "<group>"; };
+		59356CADB25DAC17DE9F5925 /* PreviewStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewStyle.swift; sourceTree = "<group>"; };
+		763D600632A71F40F2F7815D /* MarkdownRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkdownRenderer.swift; sourceTree = "<group>"; };
+		97912C99714ADABDC8CD57D7 /* InkLookApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InkLookApp.swift; sourceTree = "<group>"; };
+		97D8339BE4382DB9A61D265A /* PreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewViewController.swift; sourceTree = "<group>"; };
+		A6D28A488FF90BA0864B4287 /* InkLookPreview.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = InkLookPreview.entitlements; sourceTree = "<group>"; };
+		B696D41C92ECE47C93AB8C75 /* MarkdownTextLoaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkdownTextLoaderTests.swift; sourceTree = "<group>"; };
+		E35948C34008E6A55266C7FF /* QuickLookUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuickLookUI.framework; path = System/Library/Frameworks/QuickLookUI.framework; sourceTree = SDKROOT; };
+		F1288AFF65A34A4DDE9210A0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		F791B41033B70B1A11CB0448 /* InkLookPreview.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = InkLookPreview.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FA48C4C9324FE80D7B6E9D37 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E6C3B0786B9B378777BABB42 /* QuickLookUI.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0D1EDBB0D5FAC39147803BAF /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				54E3F9CF41ADBC92F1D8B4A5 /* MarkdownRendererTests.swift */,
+				B696D41C92ECE47C93AB8C75 /* MarkdownTextLoaderTests.swift */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		192DD3144D785F9EC1F48B5B = {
+			isa = PBXGroup;
+			children = (
+				F1602F37AFAAD97D7D5117A9 /* App */,
+				7ED8DA62D0FF8C8699526366 /* Extension */,
+				E302506957B9B296900A01B2 /* Shared */,
+				0D1EDBB0D5FAC39147803BAF /* Tests */,
+				4A996963B5D4AE76A7A84AAD /* Frameworks */,
+				DEB9E44BD24E67E8836FAAB9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4A996963B5D4AE76A7A84AAD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E35948C34008E6A55266C7FF /* QuickLookUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7ED8DA62D0FF8C8699526366 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				03A93D07323272ECD356B471 /* Info.plist */,
+				A6D28A488FF90BA0864B4287 /* InkLookPreview.entitlements */,
+				97D8339BE4382DB9A61D265A /* PreviewViewController.swift */,
+			);
+			name = Extension;
+			path = Sources/Extension;
+			sourceTree = "<group>";
+		};
+		DEB9E44BD24E67E8836FAAB9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2200416FC528D1261CF071F2 /* InkLook.app */,
+				F791B41033B70B1A11CB0448 /* InkLookPreview.appex */,
+				4476A86835B083184DAFDDA2 /* InkLookTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E302506957B9B296900A01B2 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				763D600632A71F40F2F7815D /* MarkdownRenderer.swift */,
+				341F7D0516B7C0722BA0270C /* MarkdownTextLoader.swift */,
+				59356CADB25DAC17DE9F5925 /* PreviewStyle.swift */,
+				3EDE80E974D846E26E6DFC74 /* PreviewTextView.swift */,
+			);
+			name = Shared;
+			path = Sources/Shared;
+			sourceTree = "<group>";
+		};
+		F1602F37AFAAD97D7D5117A9 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				F1288AFF65A34A4DDE9210A0 /* Info.plist */,
+				4C1D382BB3D7959738F271AD /* InkLook.entitlements */,
+				97912C99714ADABDC8CD57D7 /* InkLookApp.swift */,
+			);
+			name = App;
+			path = Sources/App;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		592151513CB42F8FC49FEE0C /* InkLookPreview */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 01B66B7D2E0ADE84D14EA0D5 /* Build configuration list for PBXNativeTarget "InkLookPreview" */;
+			buildPhases = (
+				93323AAB4F678E70461F7D43 /* Sources */,
+				FA48C4C9324FE80D7B6E9D37 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = InkLookPreview;
+			packageProductDependencies = (
+			);
+			productName = InkLookPreview;
+			productReference = F791B41033B70B1A11CB0448 /* InkLookPreview.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		C825476A14D9B366C9C66DA6 /* InkLook */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AB0FFF41F97E902B293BA5EA /* Build configuration list for PBXNativeTarget "InkLook" */;
+			buildPhases = (
+				038EA9FA1CF5682CB6DBD163 /* Sources */,
+				0D9D0B429C8D130C197E35B4 /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D5C3D8F84D5F7069DAC1A894 /* PBXTargetDependency */,
+			);
+			name = InkLook;
+			packageProductDependencies = (
+			);
+			productName = InkLook;
+			productReference = 2200416FC528D1261CF071F2 /* InkLook.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F706BF27A6A7390EE36AFDA5 /* InkLookTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BB59A76B61A678BCB9D86499 /* Build configuration list for PBXNativeTarget "InkLookTests" */;
+			buildPhases = (
+				6085B27C8C0DBD070F1239A8 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = InkLookTests;
+			packageProductDependencies = (
+			);
+			productName = InkLookTests;
+			productReference = 4476A86835B083184DAFDDA2 /* InkLookTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6793D5CAF21659C6F75AED46 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					592151513CB42F8FC49FEE0C = {
+						ProvisioningStyle = Automatic;
+					};
+					C825476A14D9B366C9C66DA6 = {
+						ProvisioningStyle = Automatic;
+					};
+					F706BF27A6A7390EE36AFDA5 = {
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 0A3EAB68DDBAE36C765A2F5A /* Build configuration list for PBXProject "InkLook" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 192DD3144D785F9EC1F48B5B;
+			minimizedProjectReferenceProxies = 1;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C825476A14D9B366C9C66DA6 /* InkLook */,
+				592151513CB42F8FC49FEE0C /* InkLookPreview */,
+				F706BF27A6A7390EE36AFDA5 /* InkLookTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		038EA9FA1CF5682CB6DBD163 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FFBB577A83E50433272D8461 /* InkLookApp.swift in Sources */,
+				E3AF3CD9C92F8954E6D7359F /* MarkdownRenderer.swift in Sources */,
+				03F1B6A6890EB88B1760F063 /* MarkdownTextLoader.swift in Sources */,
+				37594CDF4A6D6DAE7D6B157C /* PreviewStyle.swift in Sources */,
+				51F405BA37938B006B3E0486 /* PreviewTextView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6085B27C8C0DBD070F1239A8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE01428924D029469353556F /* MarkdownRenderer.swift in Sources */,
+				D3A5359C973E3C7FD0D0B72C /* MarkdownRendererTests.swift in Sources */,
+				2D14DA74522FCC98596A4084 /* MarkdownTextLoader.swift in Sources */,
+				C441CFAF07F911F496FD70FE /* MarkdownTextLoaderTests.swift in Sources */,
+				FC5728F061C89A862B5C027D /* PreviewStyle.swift in Sources */,
+				D5479CD47F91E38FD7931049 /* PreviewTextView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		93323AAB4F678E70461F7D43 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7E0EC00D29EC188AF8517487 /* MarkdownRenderer.swift in Sources */,
+				BBCB0C2D302D816AC1814A9C /* MarkdownTextLoader.swift in Sources */,
+				D5F74131777B0806BB57A1DC /* PreviewStyle.swift in Sources */,
+				72204F9DBC9512643B1081E0 /* PreviewTextView.swift in Sources */,
+				865B2C6709E5D43800630F7F /* PreviewViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D5C3D8F84D5F7069DAC1A894 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 592151513CB42F8FC49FEE0C /* InkLookPreview */;
+			targetProxy = D5EE93AD761C6CF2C7CB9259 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		042E960548D32961F41005CB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Sources/App/InkLook.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Sources/App/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = dev.reyneill.InkLook;
+				PRODUCT_NAME = InkLook;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		0FFB7DC0DF4BE171C1A957C3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Sources/Extension/InkLookPreview.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = N4L4H4S2YB;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Sources/Extension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = dev.reyneill.InkLook.Preview;
+				PRODUCT_NAME = InkLookPreview;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		48B13D95C5A51262492A46A2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 0.1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 6.0;
+			};
+			name = Debug;
+		};
+		4D161C15C009A304DABF3115 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = dev.reyneill.InkLook.Tests;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		80D558333B242CEA568729C6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Sources/App/InkLook.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Sources/App/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = dev.reyneill.InkLook;
+				PRODUCT_NAME = InkLook;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		87589C4A809670D804F9F800 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 0.1.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 6.0;
+			};
+			name = Release;
+		};
+		CB79D7DFBFD6AD5A4A00677E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = dev.reyneill.InkLook.Tests;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		DAF7C0B24F5326A116E57AA4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Sources/Extension/InkLookPreview.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = N4L4H4S2YB;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = Sources/Extension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = dev.reyneill.InkLook.Preview;
+				PRODUCT_NAME = InkLookPreview;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		01B66B7D2E0ADE84D14EA0D5 /* Build configuration list for PBXNativeTarget "InkLookPreview" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0FFB7DC0DF4BE171C1A957C3 /* Debug */,
+				DAF7C0B24F5326A116E57AA4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		0A3EAB68DDBAE36C765A2F5A /* Build configuration list for PBXProject "InkLook" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				48B13D95C5A51262492A46A2 /* Debug */,
+				87589C4A809670D804F9F800 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		AB0FFF41F97E902B293BA5EA /* Build configuration list for PBXNativeTarget "InkLook" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				80D558333B242CEA568729C6 /* Debug */,
+				042E960548D32961F41005CB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		BB59A76B61A678BCB9D86499 /* Build configuration list for PBXNativeTarget "InkLookTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CB79D7DFBFD6AD5A4A00677E /* Debug */,
+				4D161C15C009A304DABF3115 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6793D5CAF21659C6F75AED46 /* Project object */;
+}

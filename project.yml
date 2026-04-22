@@ -1,0 +1,64 @@
+name: InkLook
+options:
+  bundleIdPrefix: dev.reyneill
+  deploymentTarget:
+    macOS: "14.0"
+settings:
+  base:
+    MARKETING_VERSION: 0.1.0
+    CURRENT_PROJECT_VERSION: 1
+    SWIFT_VERSION: 6.0
+    CODE_SIGN_STYLE: Automatic
+targets:
+  InkLook:
+    type: application
+    platform: macOS
+    sources:
+      - Sources/App
+      - Sources/Shared
+    settings:
+      base:
+        PRODUCT_NAME: InkLook
+        PRODUCT_BUNDLE_IDENTIFIER: dev.reyneill.InkLook
+        INFOPLIST_FILE: Sources/App/Info.plist
+        CODE_SIGN_ENTITLEMENTS: Sources/App/InkLook.entitlements
+        GENERATE_INFOPLIST_FILE: NO
+    dependencies:
+      - target: InkLookPreview
+        embed: true
+  InkLookPreview:
+    type: app-extension
+    platform: macOS
+    sources:
+      - Sources/Extension
+      - Sources/Shared
+    settings:
+      base:
+        PRODUCT_NAME: InkLookPreview
+        PRODUCT_BUNDLE_IDENTIFIER: dev.reyneill.InkLook.Preview
+        INFOPLIST_FILE: Sources/Extension/Info.plist
+        CODE_SIGN_ENTITLEMENTS: Sources/Extension/InkLookPreview.entitlements
+        GENERATE_INFOPLIST_FILE: NO
+        SKIP_INSTALL: YES
+    dependencies:
+      - sdk: QuickLookUI.framework
+  InkLookTests:
+    type: bundle.unit-test
+    platform: macOS
+    sources:
+      - Tests
+      - Sources/Shared
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: dev.reyneill.InkLook.Tests
+        GENERATE_INFOPLIST_FILE: YES
+        BUNDLE_LOADER: ""
+schemes:
+  InkLook:
+    build:
+      targets:
+        InkLook: all
+    test:
+      config: Debug
+      targets:
+        - InkLookTests
